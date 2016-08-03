@@ -49,23 +49,58 @@
 <?php include 'include/header.php'; ?>
 
 <body>
-    
-    <h1>Memberlist</h1>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Username</th>
-            <th>E-Mail Address</th>
-        </tr>
-        <?php foreach($rows as $row): ?>
-            <tr>
-                <td><?php echo $row['id']; ?></td> <!-- htmlentities is not needed here because $row['id'] is always an integer -->
-                <td><?php echo htmlentities($row['username'], ENT_QUOTES, 'UTF-8'); ?></td>
-                <td><?php echo htmlentities($row['email'], ENT_QUOTES, 'UTF-8'); ?></td>
-            </tr>
-        <?php endforeach; ?>
-    </table>
-    <a href="private.php">Go Back</a><br />
+
+    <div id="page">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img alt="Brand" src="...">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <p class="navbar-text navbar-right">Signed in as <a href="edit_account.php" class="navbar-link"><?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?></a></p>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="memberlist.php">Memberlist</a>
+                        </li>
+                        <li>
+                            <a href="edit_account.php">Edit Account</a>
+                        </li>
+                        <li>
+                            <a href="logout.php">Logout</a>
+                        </li>
+                    </ul>
+                </div>                      
+            </div>
+        </nav>
+        <div id="info">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Memberlist</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="container-fluid">                                            
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>ID</th>
+                                <th>Username</th>
+                                <th>E-Mail Address</th>
+                            </tr>
+                            <?php foreach($rows as $row): ?>
+                                <tr>
+                                    <td><?php echo $row['id']; ?></td> <!-- htmlentities is not needed here because $row['id'] is always an integer -->
+                                    <td><?php echo htmlentities($row['username'], ENT_QUOTES, 'UTF-8'); ?></td>
+                                    <td><?php echo htmlentities($row['email'], ENT_QUOTES, 'UTF-8'); ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </table>
+                        <p><a href="private.php">Go Back</a></p>
+                    </div>
+                </div>
+            </div>                
+        </div>
+    </div>
 
 <?php include 'include/footer.php'; ?>
 

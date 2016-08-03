@@ -27,6 +27,29 @@
 <body>
     
     <div id="page">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img alt="Brand" src="...">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <p class="navbar-text navbar-right">Signed in as <a href="edit_account.php" class="navbar-link"><?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?></a></p>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="memberlist.php">Memberlist</a>
+                        </li>
+                        <li>
+                            <a href="edit_account.php">Edit Account</a>
+                        </li>
+                        <li>
+                            <a href="logout.php">Logout</a>
+                        </li>
+                    </ul>
+                </div>                      
+            </div>
+        </nav>
         <div id="login">
             <div class="panel panel-default">
                 <div class="panel-heading">

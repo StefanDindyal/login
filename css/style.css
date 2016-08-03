@@ -5,6 +5,11 @@
 }
 #login {
 	position: relative;
-	max-width: 520px;
+	max-width: 580px;
+	margin: 10% auto 0;
+}
+#info {
+	position: relative;
+	max-width: 1024px;
 	margin: 10% auto 0;
 }

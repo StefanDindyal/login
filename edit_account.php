@@ -155,21 +155,69 @@
 <?php include 'include/header.php'; ?>
 
 <body>
-    
-    <h1>Edit Account</h1>
-    <form action="edit_account.php" method="post">
-        Username:<br />
-        <b><?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?></b>
-        <br /><br />
-        E-Mail Address:<br />
-        <input type="text" name="email" value="<?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?>" />
-        <br /><br />
-        Password:<br />
-        <input type="password" name="password" value="" /><br />
-        <i>(leave blank if you do not want to change your password)</i>
-        <br /><br />
-        <input type="submit" value="Update Account" />
-    </form>
+
+    <div id="page">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img alt="Brand" src="...">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <p class="navbar-text navbar-right">Signed in as <a href="edit_account.php" class="navbar-link"><?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?></a></p>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="memberlist.php">Memberlist</a>
+                        </li>
+                        <li>
+                            <a href="edit_account.php">Edit Account</a>
+                        </li>
+                        <li>
+                            <a href="logout.php">Logout</a>
+                        </li>
+                    </ul>
+                </div>                      
+            </div>
+        </nav>
+        <div id="login">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Edit Account</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="container-fluid">                        
+                        <form action="edit_account.php" method="post" class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Username:</label>
+                                <div class="col-sm-10">
+                                    <p class="form-control-static"><?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?></p>
+                                </div>
+                            </div>                                   
+                            <div class="form-group">
+                                <label for="email" class="col-sm-2 control-label">Email:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="email" id="email" value="<?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?>" class="form-control"/>                                           
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-sm-2 control-label">Password:</label>
+                                <div class="col-sm-10">
+                                    <input type="password" name="password" id="password" value="" class="form-control"/>
+                                    <span id="helpBlock" class="help-block">leave blank if you do not want to change your password</span>
+                                </div>                                
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary">Update</button>
+                                </div>
+                            </div>                                    
+                        </form>                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
 
 <?php include 'include/footer.php'; ?>
 
