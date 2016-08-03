@@ -1,0 +1,10 @@
+/* main styles */
+#page {
+	position: relative;
+	padding: 10px;
+}
+#login {
+	position: relative;
+	max-width: 520px;
+	margin: 10% auto 0;
+}

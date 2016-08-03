@@ -1,0 +1,6 @@
+'user strict';
+;(function($){
+
+	
+	
+})(jQuery);
