@@ -30,7 +30,7 @@
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="private.php">
                         <img alt="Brand" src="...">
                     </a>
                 </div>

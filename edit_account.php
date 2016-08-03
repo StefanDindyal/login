@@ -160,7 +160,7 @@
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="private.php">
                         <img alt="Brand" src="...">
                     </a>
                 </div>
@@ -170,7 +170,7 @@
                         <li>
                             <a href="memberlist.php">Memberlist</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="edit_account.php">Edit Account</a>
                         </li>
                         <li>

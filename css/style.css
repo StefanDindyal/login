@@ -13,3 +13,7 @@
 	max-width: 1024px;
 	margin: 10% auto 0;
 }
+#footer {
+	position: relative;
+	color: #999;
+}
